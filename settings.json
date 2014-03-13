@@ -1,0 +1,9 @@
+{
+    "name": "Unmark Help",
+    "creator": "Plain",
+    "creator_url": "http://plainmade.com",
+     "content_types": {
+        "blogpost": "Feature"
+    },
+    "blog": "features"
+}
