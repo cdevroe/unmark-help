@@ -1,0 +1,58 @@
+		</div>
+		
+		<div class="clearfix"></div>
+
+		<footer>
+			<div class="links">
+				<a href="http://unmark.it">Sign In / Register</a>
+				<a href="https://twitter.com/unmarkit">@unmarkit</a>
+			</div>
+			<div class="byline">Made by <a href="http://plainmade.com">Plain</a></div>
+		</footer>
+	</div>	
+	
+	<!-- Javascripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="javascripts/waypoints.min.js"></script>
+	<script src="javascripts/waypoints-sticky.min.js"></script>
+	<script src="javascripts/jquery.fitvids.js"></script>
+	<script>
+	  $(document).ready(function(){
+	    $("#content").fitVids();
+
+	    $('#barley-bar').hide();
+
+	    if(Modernizr.mq('screen and (max-width:767px)')) {
+            $('.sub-nav h2.heading').click(function(){
+		   	  $('.sub-nav ul').slideToggle();
+		   	  $(this).toggleClass("open");
+		   	});
+        }
+
+        $('#bookmarklet-textarea').hide();
+	  });
+
+	  $('.sticky').waypoint('sticky',{
+		offset: 160
+	  });
+
+	  $('.scrollup').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+   	  });
+
+   	  $( document ).on( 'keydown', function ( e ) {
+   	    if ( e.keyCode === 27 ) {
+   	      $('#barley-bar').slideToggle();
+   	    }
+   	  });
+
+   	  $(function() {
+    	if ( document.location.href.indexOf('/bookmarklet') > -1 ) {
+       	  $('#bookmarklet-textarea').show();
+   		}
+	  });
+	</script>
+
+</body>
+</html>

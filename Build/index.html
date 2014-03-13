@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+    <title>Unmark Help</title>
+
+    <link rel="stylesheet" href="stylesheets/normalize.css" />
+    <link rel="stylesheet" href="stylesheets/styles.css" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<meta name="msapplication-TileColor" content="#ff0000">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	
+	<script>
+	/* grunticon Stylesheet Loader | https://github.com/filamentgroup/grunticon | (c) 2012 Scott Jehl, Filament Group, Inc. | MIT license. */
+	window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!!t.document.createElementNS&&!!t.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect&&!!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1"),A=function(A){var o=t.document.createElement("link"),r=t.document.getElementsByTagName("script")[0];o.rel="stylesheet",o.href=e[A&&n?0:A?1:2],r.parentNode.insertBefore(o,r)},o=new t.Image;o.onerror=function(){A(!1)},o.onload=function(){A(1===o.width&&1===o.height)},o.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="}};
+	grunticon( [ "stylesheets/icons.data.svg.css", "stylesheets/icons.data.png.css", "stylesheets/icons.fallback.css" ] );</script>
+	<noscript><link href="stylesheets/icons.fallback.css" rel="stylesheet"></noscript>
+	<script src="javascripts/custom.modernizr.js"></script>
+</head>
+
+<body>
+
+	<section id="nav-bar">
+		<a class="logo" href="/">
+			<img class="logo-mark" src="images/logo.png">
+			<div class="logo-text icon-logo_text_light"></div>
+		</a>
+		<nav>
+			<ul>
+				<li><a href="http://unmark.it">Sign In / Register <span class="icon-circle_arrow_down"></span></a></li>
+				<li><a href="https://github.com/plainmade/nilai">Fork <i class="full-only">on GitHub</i> <span class="icon-github"></span></a></li>
+			</ul>
+		</nav>
+	</section>
+	<section id="container">
+		<div class="sub-nav">
+			<div class="sticky">
+				<h2 class="heading">Unmark Help <span class="icon-option_down dropdown-toggle"></span></h2>
+				<ul id="menu" data-barley-navigation="left">
+					<!-- barleynav -->
+					<li><a href="/">Overview</a></li>
+					<!-- endbarleynav -->
+				</ul>
+			</div>
+		</div>
+
+		<div class="content">
+			<h2 data-barley="title" data-barley-editor="simple">Page Title...</h2>
+			<div data-barley="content" data-barley-editor="advanced">
+				<p>Type away muchacho...</p>
+			</div>
+
+		</div>
+		
+		<div class="clearfix"></div>
+
+		<footer>
+			<div class="links">
+				<a href="http://unmark.it">Sign In / Register</a>
+				<a href="https://twitter.com/unmarkit">@unmarkit</a>
+			</div>
+			<div class="byline">Made by <a href="http://plainmade.com">Plain</a></div>
+		</footer>
+	</div>	
+	
+	<!-- Javascripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="javascripts/waypoints.min.js"></script>
+	<script src="javascripts/waypoints-sticky.min.js"></script>
+	<script src="javascripts/jquery.fitvids.js"></script>
+	<script>
+	  $(document).ready(function(){
+	    $("#content").fitVids();
+
+	    $('#barley-bar').hide();
+
+	    if(Modernizr.mq('screen and (max-width:767px)')) {
+            $('.sub-nav h2.heading').click(function(){
+		   	  $('.sub-nav ul').slideToggle();
+		   	  $(this).toggleClass("open");
+		   	});
+        }
+
+        $('#bookmarklet-textarea').hide();
+	  });
+
+	  $('.sticky').waypoint('sticky',{
+		offset: 160
+	  });
+
+	  $('.scrollup').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+   	  });
+
+   	  $( document ).on( 'keydown', function ( e ) {
+   	    if ( e.keyCode === 27 ) {
+   	      $('#barley-bar').slideToggle();
+   	    }
+   	  });
+
+   	  $(function() {
+    	if ( document.location.href.indexOf('/bookmarklet') > -1 ) {
+       	  $('#bookmarklet-textarea').show();
+   		}
+	  });
+	</script>
+
+</body>
+</html>			
