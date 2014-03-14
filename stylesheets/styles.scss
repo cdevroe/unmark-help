@@ -189,12 +189,22 @@ nav {
 			@include title-text;
 			font-size: 12px;
 			text-align: right;
-			padding: 0 16px;
+			padding: 0 13px;
 			line-height: 28px;
 			a {
 				color: darken($blue, 10%);
 			}
 		}
+	}
+	.owner-link {
+		display: block;
+		@include title-text;
+		font-size: 12px;
+		text-align: right;
+		padding: 0 13px;
+		margin-bottom: 10px;
+		line-height: 28px;
+		color: darken($blue, 10%);
 	}
 }
 .content {

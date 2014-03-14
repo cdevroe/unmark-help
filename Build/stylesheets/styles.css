@@ -155,10 +155,23 @@ nav {
       font-weight: normal;
       font-size: 12px;
       text-align: right;
-      padding: 0 16px;
+      padding: 0 13px;
       line-height: 28px; }
       .sub-nav ul li a {
         color: #229fd6; }
+  .sub-nav .owner-link {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 12px;
+    text-align: right;
+    padding: 0 13px;
+    margin-bottom: 10px;
+    line-height: 28px;
+    color: #229fd6; }
 
 .content {
   width: 74%;
